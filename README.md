@@ -1,6 +1,7 @@
 # NeBULA
 
 (Next-Generation Bioisostere Utility Libraries)
+[[Paper]](https://www.sciencedirect.com/science/article/pii/S2590098625000284)
 
 A web-based novel drug design platform for up-to-date bioisosteric replacement
 
@@ -43,5 +44,9 @@ cd nebula
 <h3>3. Bioisosteric replacement for batch input</h3>
 <pre><code>python reaction.py --input_csv molecules.csv</code></pre>
 <p>You need to make sure the <em>molecules.csv</em> file has SMILES header </p>
+
+### Reference
+- [Huang, S., Wang, S., Dong, J., Xu, M., & Yuan, S. (2025). *NeBULA: a web-based novel drug design platform for up-to-date bioisosteric replacement.* Medicine in Drug Discovery, 28, 100231.](https://www.sciencedirect.com/science/article/pii/S2590098625000284)  
+  https://doi.org/10.1016/j.medidd.2025.100231
 
 
