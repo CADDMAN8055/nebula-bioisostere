@@ -33,7 +33,7 @@ st.markdown("---")
 try:
     from reaction import count_heavy_atoms, get_heavy_atom_difference
     from rdkit import Chem
-    from rdkit.Chem import AllChem, Descriptors, rdMolDescriptors
+    from rdkit.Chem import AllChem, Descriptors
     RDKIT_AVAILABLE = True
 except Exception as e:
     RDKIT_AVAILABLE = False
@@ -184,13 +184,12 @@ if generate and smiles_input:
             mol = Chem.MolFromSmiles(smiles_input)
             if mol:
                 mw = Descriptors.MolWt(mol)
-                formula = rdMolDescriptors.CalcMolecularFormula(mol)
                 heavy_atoms = count_heavy_atoms(mol)
                 st.markdown(f"""
                 <div class="info-box">
                     <p><strong>Canonical SMILES:</strong></p>
                     <code class="molecule-box">{Chem.MolToSmiles(mol)}</code>
-                    <p><strong>MW:</strong> {mw:.2f} | <strong>Formula:</strong> {formula} | <strong>Heavy Atoms:</strong> {heavy_atoms}</p>
+                    <p><strong>MW:</strong> {mw:.2f} | <strong>Heavy Atoms:</strong> {heavy_atoms}</p>
                 </div>
                 """, unsafe_allow_html=True)
         
@@ -220,12 +219,11 @@ if generate and smiles_input:
                         prod_mol = Chem.MolFromSmiles(prod_smiles)
                         if prod_mol:
                             prod_mw = Descriptors.MolWt(prod_mol)
-                            prod_formula = rdMolDescriptors.CalcMolecularFormula(prod_mol)
                             prod_heavy = count_heavy_atoms(prod_mol)
                             
                             st.markdown(f"""
                             <div style="background:#0d1b2a;padding:0.5rem;border-radius:5px;margin-top:0.5rem;">
-                                <p style="margin:0;"><small>MW: {prod_mw:.2f} | Formula: {prod_formula}</small></p>
+                                <p style="margin:0;"><small>MW: {prod_mw:.2f} | Heavy Atoms: {prod_heavy}</small></p>
                             </div>
                             """, unsafe_allow_html=True)
                         
