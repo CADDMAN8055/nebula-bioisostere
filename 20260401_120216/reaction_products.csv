@@ -1,0 +1,12 @@
+Original_Molecule_SMILES,Reaction_SMARTS,Product_SMILES
+c1ccccc1,[c:1]1[c:2][c:3][c:4][c:5][c:6]1>>[C:1]1[C:2][C:3]2[C:4][C:5][C:6]1[C][C]2,C1CC2CCC1CC2
+c1ccccc1,[c:1]1[c:2][c:3][c:4][c:5][c:6]1 >> [C:1]1-[C:2]-[C:3]-[C:4]-[C:5]-[C:6]-1,C1CCCCC1
+c1ccccc1,[c:1]1[c:2][c:3][c:4][c:5][c:6]1 >> [N:1]1-[C:2]-[C:3]-[C:4]-[C:5]-[C:6]-1,C1CCNCC1
+c1ccccc1,[c:1]1[c:2][c:3][c:4][c:5][c]1>> [C:1]1-[C:2]-[C:3]-[C:4]-[C:5]-1,C1CCCC1
+c1ccccc1,[c:1]1[c:2]cc[c:5][c:4]1>>[C:1]1[C:2][O][C:4][C:5][N]1,C1COCCN1
+c1ccccc1,[c:1]1[c:2][c:3][c:4][c:5][c:6]1>>[C:1]12[C:2]3[C:5]4[C:6]1C1C2[C:3]3[C:4]41,C12C3C4C1C1C2C3C41
+c1ccccc1,[c:1]1[c:2][c][c:4][c:5][c:6]1>>[C:4]1[C:1]2[C:2][C:5]1[C:6]2,C1C2CC1C2
+c1ccccc1,[c:1]1[c:2][c:3][c:4][c:5][c:6]1>>[C:1]1[C:2][C:3]2[C:5][C:6]1[C:4]2,C1CC2CC1C2
+c1ccccc1,[c:1]1[c:2][c:3][c:4][c:5][c:6]1>>[C:1]1[C:6][C:5]2C[C:3]([C:2]1)[C:4]2,C1CC2CC(C1)C2
+c1ccccc1,[c:1]1[c:2][c:3][c:4][c:5][c:6]1>>[C:1]12[C:2]3[C:5]4[C:6]1C1[C:4]2[C:3]3N41,C12C3C4C1C1C2C3N41
+c1ccccc1,[c:1]1[c:2][c:3][c:4][c:5][c:6]1>>[C:4]1[C:5][C:6][C:1]2([C:2][C:3]1)OCCO2,C1CCC2(CC1)OCCO2
