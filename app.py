@@ -33,7 +33,7 @@ st.markdown("---")
 try:
     from reaction import count_heavy_atoms, get_heavy_atom_difference
     from rdkit import Chem
-    from rdkit.Chem import AllChem
+    from rdkit.Chem import AllChem, Descriptors, rdMolDescriptors
     RDKIT_AVAILABLE = True
 except Exception as e:
     RDKIT_AVAILABLE = False
@@ -183,8 +183,8 @@ if generate and smiles_input:
         with col_orig_info:
             mol = Chem.MolFromSmiles(smiles_input)
             if mol:
-                mw = Chem.Descriptors.MolWt(mol)
-                formula = Chem.rdMolDescriptors.CalcMolecularFormula(mol)
+                mw = Descriptors.MolWt(mol)
+                formula = rdMolDescriptors.CalcMolecularFormula(mol)
                 heavy_atoms = count_heavy_atoms(mol)
                 st.markdown(f"""
                 <div class="info-box">
@@ -219,8 +219,8 @@ if generate and smiles_input:
                         # Product info
                         prod_mol = Chem.MolFromSmiles(prod_smiles)
                         if prod_mol:
-                            prod_mw = Chem.Descriptors.MolWt(prod_mol)
-                            prod_formula = Chem.rdMolDescriptors.CalcMolecularFormula(prod_mol)
+                            prod_mw = Descriptors.MolWt(prod_mol)
+                            prod_formula = rdMolDescriptors.CalcMolecularFormula(prod_mol)
                             prod_heavy = count_heavy_atoms(prod_mol)
                             
                             st.markdown(f"""
